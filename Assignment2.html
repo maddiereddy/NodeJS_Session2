@@ -1,0 +1,15 @@
+<!--Example of a closure in which the outer function (outerMultipy) has a parameter that is used
+by the inner function (innerMultiply) which also has a parameter. The operation performed by the
+inner function is to return multiplication of both the parameters value. The closure function is called and
+ an alert displays the multiplication produced by the closure-->
+
+<script>
+    function outerMultiply(param1){
+        var innerMultiply = function (param2){
+            alert("Multiplication of outer param " + param1 + " and inner param " + param2 + " is " + (param1 * param2));
+        }
+        return innerMultiply;
+    }
+    var closureFunc = outerMultiply(12);
+    closureFunc(8); //accessing the inner function using closures
+</script>

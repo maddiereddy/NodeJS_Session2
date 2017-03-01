@@ -1,0 +1,14 @@
+<!--Example of a simple nested function in which the inner function (multiplyInner)
+ is not accessible outside the outer function (multiplyOuter).
+ Alert displays the values from the function-->
+
+<script>
+    function multiplyOuter(param1) {
+        function multiplyInnerbyEight(param2) { //nested inner function
+            console.log("Inner Function result: " + param2 + " * 8 = " + (param2 * 8));
+            return param2 * 8;
+        }
+        return "Outer function result from inner function " + multiplyInnerbyEight(param1);
+    }
+    alert(multiplyOuter(12));
+</script>

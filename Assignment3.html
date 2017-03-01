@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <!-- Create an object type person which consists of
+    first name, last name, email and phone properties.
+    Using JavaScript append these properties to appropriate place in an html document-->
+</head>
+<body>
+    <!--Display properties of person object here-->
+    <p id="firstName">First Name: </p>
+    <p id="lastName">Last Name: </p>
+    <p id="email">Email: </p>
+    <p id="phone">Phone: </p>
+
+    <script>
+        //create an object of type person which has properties
+        //firstname, lastname, email and phone
+        function person(first, last, email, phone){
+            this.firstName = first;
+            this.lastName = last;
+            this.email = email;
+            this.phone = phone;
+        }
+
+        //In this functiioncreate an instance of person and name it steve and
+        // use it to populate placeholder in the html doc
+        function myFunction() {
+            var steve = new person("Steve", "Jobs", "stevejobs@gmail.com", "408-555-1212")//create using constructor
+            document.getElementById("firstName").innerHTML += steve.firstName;
+            document.getElementById("lastName").innerHTML += steve.lastName;
+            document.getElementById("email").innerHTML += steve.email;
+            document.getElementById("phone").innerHTML += steve.phone;
+        }
+
+        //call function
+        myFunction();
+    </script>
+</body>
+</html>
